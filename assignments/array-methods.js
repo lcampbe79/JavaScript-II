@@ -81,7 +81,9 @@ console.log(largeShirts);
 
 // ==== Challenge 4: Use .reduce() ====
 // The donations need to be tallied up and reported for tax purposes. Add up all the donations into a ticketPriceTotal array and log the result
-let ticketPriceTotal = [];
+let ticketPriceTotal = runners.reduce(function(total, runner) {
+    return total + runner.donation;
+}, 0);
 console.log(ticketPriceTotal);
 
 // ==== Challenge 5: Be Creative ====
@@ -89,6 +91,24 @@ console.log(ticketPriceTotal);
 
 // Problem 1
 
+//An array that came from Challenge 4 where instead of an array I wanted the full names of the runners that needed to change shirt sizes.
+let namesLargeShirts = [];
+
+runners.forEach(function(runner) {
+   if (runner.shirt_size === "L") {
+     namesLargeShirts.push(`${runner.first_name} ${runner.last_name}`)
+   }
+});
+
+console.log(namesLargeShirts);
+
 // Problem 2
+//After the 5k ends, we can send a little extra tank you to people who donated over $200.
+
+let whales = runners.filter(function(runner) {
+    return runner.donation >= 200;
+});
+  
+console.log(whales)
 
 // Problem 3

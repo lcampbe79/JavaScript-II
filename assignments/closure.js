@@ -1,6 +1,23 @@
 // ==== Challenge 1: Write your own closure ====
 // Write a simple closure of your own creation.  Keep it simple!
 
+function sayQuack(duckSpeak) {
+  const myQuack = duckSpeak;
+  console.log(`I am a duck and I like to ${myQuack}`)
+
+  function eatFood() {
+    const theDish = "bread";
+    console.log(`The duck ${myQuack} and it is now hungry. I will now feed it ${theDish}`)
+
+    function goToSleep(
+    )
+  }
+  eatFood();
+  
+}
+
+sayQuack("say quack");
+
 
 /* STRETCH PROBLEMS, Do not attempt until you have completed all previous tasks for today's project files */
 
